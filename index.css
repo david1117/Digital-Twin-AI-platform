@@ -156,6 +156,16 @@ header p {
     background-color: var(--primary-hover-color);
 }
 
+.detail-hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
 #detail-content h2 {
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 2rem;
