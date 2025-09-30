@@ -45,7 +45,7 @@ const cases = [
     id: 4,
     title: '風力發電場運營與維護優化',
     industry: '能源',
-    image: 'https://images.unsplash.com/photo-1545789173-05a82a004221?q=80&w=600&h=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: 'https://images.unsplash.com/photo-1508212323595-65b95c3a3469?q=80&w=600&h=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     summary: '為離岸風力發電場建立數位孿生，精準預測發電量並優化維護，年發電量提升 8%。',
     background: '離岸風力發電場的運營和維護成本高昂。如何根據天氣變化最大化發電效率，並在惡劣海象下安排維護，是一個重大挑戰。',
     solution: '為整個風場的每一台風機都建立了數位孿生模型。模型整合了即時氣象數據、風機自身的感測器數據和電網需求，能夠精準預測未來 48 小時的發電量，並對各個組件的健康狀況進行評分，建議最佳的維護窗口。',
