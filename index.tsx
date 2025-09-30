@@ -85,6 +85,14 @@ const caseDetailView = document.getElementById('case-detail');
 const detailContent = document.getElementById('detail-content');
 const backBtn = document.getElementById('back-btn');
 const mainHeader = document.querySelector('header');
+const addCaseBtn = document.getElementById('add-case-btn');
+const shareCaseModal = document.getElementById('share-case-modal');
+const closeModalBtn = document.getElementById('close-modal-btn');
+const cancelBtn = document.getElementById('cancel-btn');
+const shareCaseForm = document.getElementById('share-case-form') as HTMLFormElement;
+const formContainer = document.getElementById('form-container');
+const submissionResult = document.getElementById('submission-result');
+const jsonOutput = document.getElementById('json-output');
 
 // --- RENDER FUNCTIONS ---
 
@@ -98,7 +106,6 @@ function renderFilters() {
     `<button class="filter-btn" data-industry="${industry}">${industry}</button>`
   ).join('');
 
-  // Set the first button ("全部") as active by default
   const firstButton = filterNav.querySelector('.filter-btn');
   if (firstButton) {
     firstButton.classList.add('active');
@@ -154,11 +161,11 @@ function renderDetail(caseId: number) {
  * Shows the grid view and hides the detail view.
  */
 function showGridView() {
-  if (caseGrid && caseDetailView && filterNav && mainHeader && searchInput) {
+  if (caseGrid && caseDetailView && mainHeader && searchInput) {
     caseDetailView.classList.add('hidden');
     caseGrid.classList.remove('hidden');
-    filterNav.parentElement.classList.remove('hidden');
     mainHeader.classList.remove('hidden');
+    document.querySelector('.controls-container').classList.remove('hidden');
   }
 }
 
@@ -167,16 +174,39 @@ function showGridView() {
  * @param {number} caseId - The ID of the case to show.
  */
 function showDetailView(caseId: number) {
-  if (caseGrid && caseDetailView && filterNav && mainHeader && searchInput) {
+  if (caseGrid && caseDetailView && mainHeader && searchInput) {
     renderDetail(caseId);
     caseGrid.classList.add('hidden');
-    filterNav.parentElement.classList.add('hidden');
     mainHeader.classList.add('hidden');
+    document.querySelector('.controls-container').classList.add('hidden');
     caseDetailView.classList.remove('hidden');
     window.scrollTo(0, 0);
   }
 }
 
+// --- MODAL MANAGEMENT ---
+
+/**
+ * Opens the share case modal.
+ */
+function openModal() {
+    if (shareCaseModal) {
+        shareCaseModal.classList.remove('hidden');
+    }
+}
+
+/**
+ * Closes the share case modal and resets its state.
+ */
+function closeModal() {
+    if (shareCaseModal && shareCaseForm && formContainer && submissionResult) {
+        shareCaseModal.classList.add('hidden');
+        // Reset form for next time
+        shareCaseForm.reset();
+        formContainer.classList.remove('hidden');
+        submissionResult.classList.add('hidden');
+    }
+}
 
 // --- EVENT LISTENERS & FILTERING LOGIC ---
 
@@ -221,7 +251,6 @@ function applyFilters() {
 function handleFilterClick(e: Event) {
   const target = e.target as HTMLElement;
   if (target.matches('.filter-btn')) {
-    // Update active button state
     document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
     target.classList.add('active');
     applyFilters();
@@ -241,11 +270,48 @@ function handleGridClick(e: Event) {
     }
 }
 
+/**
+ * Handles the submission of the share case form.
+ * @param {Event} e - The submit event.
+ */
+function handleFormSubmit(e: Event) {
+    e.preventDefault();
+    if (!shareCaseForm.checkValidity()) {
+        shareCaseForm.reportValidity();
+        return;
+    }
+
+    const formData = new FormData(shareCaseForm);
+    const newCaseData: Omit<Case, 'id'> = {
+        title: formData.get('title') as string,
+        industry: formData.get('industry') as string,
+        image: formData.get('image') as string,
+        summary: formData.get('summary') as string,
+        background: formData.get('background') as string,
+        solution: formData.get('solution') as string,
+        techStack: (formData.get('techStack') as string).split(',').map(tech => tech.trim()),
+        results: formData.get('results') as string,
+    };
+
+    const displayData = { id: cases.length + 1, ...newCaseData };
+
+    if (jsonOutput && formContainer && submissionResult) {
+        jsonOutput.textContent = JSON.stringify(displayData, null, 2);
+        formContainer.classList.add('hidden');
+        submissionResult.classList.remove('hidden');
+    }
+}
+
 
 // --- INITIALIZATION ---
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (!searchInput || !filterNav || !caseGrid || !caseDetailView || !backBtn) {
+  const requiredElements = [
+    searchInput, filterNav, caseGrid, caseDetailView, backBtn,
+    addCaseBtn, shareCaseModal, closeModalBtn, cancelBtn, shareCaseForm
+  ];
+
+  if (requiredElements.some(el => !el)) {
     console.error('A required element was not found in the DOM.');
     return;
   }
@@ -259,4 +325,15 @@ document.addEventListener('DOMContentLoaded', () => {
   searchInput.addEventListener('input', applyFilters);
   caseGrid.addEventListener('click', handleGridClick);
   backBtn.addEventListener('click', showGridView);
+
+  // Modal event listeners
+  addCaseBtn.addEventListener('click', openModal);
+  closeModalBtn.addEventListener('click', closeModal);
+  cancelBtn.addEventListener('click', closeModal);
+  shareCaseModal.addEventListener('click', (e) => {
+    if (e.target === shareCaseModal) {
+        closeModal();
+    }
+  });
+  shareCaseForm.addEventListener('submit', handleFormSubmit);
 });
