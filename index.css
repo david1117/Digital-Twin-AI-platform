@@ -45,11 +45,33 @@ header p {
     color: var(--text-color-light);
 }
 
+.controls-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#search-input {
+    width: 60%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
 #filter-nav {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
-    margin-bottom: 2rem;
     flex-wrap: wrap;
 }
 
@@ -215,5 +237,8 @@ header p {
     }
     header h1 {
         font-size: 2rem;
+    }
+    #search-input {
+        width: 100%;
     }
 }

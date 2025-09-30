@@ -4,10 +4,21 @@
  */
 
 // --- DATA STRUCTURES ---
+interface Case {
+  id: number;
+  title: string;
+  industry: string;
+  image: string;
+  summary: string;
+  background: string;
+  solution: string;
+  techStack: string[];
+  results: string;
+}
 
 // --- STATIC DATA (Based on PRD) ---
 
-const cases = [
+const cases: Case[] = [
   {
     id: 1,
     title: '智慧工廠產線效能優化',
@@ -67,6 +78,7 @@ const cases = [
 
 // --- DOM Element Selection ---
 
+const searchInput = document.getElementById('search-input') as HTMLInputElement;
 const filterNav = document.getElementById('filter-nav');
 const caseGrid = document.getElementById('case-grid');
 const caseDetailView = document.getElementById('case-detail');
@@ -97,7 +109,7 @@ function renderFilters() {
  * Renders the case cards in the grid.
  * @param {Case[]} casesToRender - An array of case objects to display.
  */
-function renderGrid(casesToRender) {
+function renderGrid(casesToRender: Case[]) {
   if (!caseGrid) return;
   caseGrid.innerHTML = casesToRender.map(caseItem => `
     <div class="case-card" data-id="${caseItem.id}">
@@ -115,7 +127,7 @@ function renderGrid(casesToRender) {
  * Renders the detailed view for a specific case.
  * @param {number} caseId - The ID of the case to display.
  */
-function renderDetail(caseId) {
+function renderDetail(caseId: number) {
   const caseItem = cases.find(c => c.id === caseId);
   if (!caseItem || !detailContent) return;
 
@@ -142,10 +154,10 @@ function renderDetail(caseId) {
  * Shows the grid view and hides the detail view.
  */
 function showGridView() {
-  if (caseGrid && caseDetailView && filterNav && mainHeader) {
+  if (caseGrid && caseDetailView && filterNav && mainHeader && searchInput) {
     caseDetailView.classList.add('hidden');
     caseGrid.classList.remove('hidden');
-    filterNav.classList.remove('hidden');
+    filterNav.parentElement.classList.remove('hidden');
     mainHeader.classList.remove('hidden');
   }
 }
@@ -154,11 +166,11 @@ function showGridView() {
  * Shows the detail view for a case and hides the grid view.
  * @param {number} caseId - The ID of the case to show.
  */
-function showDetailView(caseId) {
-  if (caseGrid && caseDetailView && filterNav && mainHeader) {
+function showDetailView(caseId: number) {
+  if (caseGrid && caseDetailView && filterNav && mainHeader && searchInput) {
     renderDetail(caseId);
     caseGrid.classList.add('hidden');
-    filterNav.classList.add('hidden');
+    filterNav.parentElement.classList.add('hidden');
     mainHeader.classList.add('hidden');
     caseDetailView.classList.remove('hidden');
     window.scrollTo(0, 0);
@@ -166,26 +178,53 @@ function showDetailView(caseId) {
 }
 
 
-// --- EVENT LISTENERS ---
+// --- EVENT LISTENERS & FILTERING LOGIC ---
+
+/**
+ * A centralized function to filter and render the grid based on
+ * the current active industry filter and search term.
+ */
+function applyFilters() {
+    const activeFilter = document.querySelector('.filter-btn.active') as HTMLElement;
+    const selectedIndustry = activeFilter ? activeFilter.dataset.industry : '全部';
+    const searchTerm = searchInput.value.toLowerCase().trim();
+
+    let filteredCases = cases;
+
+    // 1. Filter by industry
+    if (selectedIndustry && selectedIndustry !== '全部') {
+        filteredCases = filteredCases.filter(c => c.industry === selectedIndustry);
+    }
+
+    // 2. Filter by search term
+    if (searchTerm) {
+        filteredCases = filteredCases.filter(c => {
+            const searchCorpus = [
+                c.title,
+                c.summary,
+                c.background,
+                c.solution,
+                c.results,
+                ...c.techStack
+            ].join(' ').toLowerCase();
+            return searchCorpus.includes(searchTerm);
+        });
+    }
+
+    renderGrid(filteredCases);
+}
 
 /**
  * Handles clicks on the filter navigation.
  * @param {Event} e - The click event.
  */
-function handleFilterClick(e) {
-  const target = e.target;
+function handleFilterClick(e: Event) {
+  const target = e.target as HTMLElement;
   if (target.matches('.filter-btn')) {
     // Update active button state
     document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
     target.classList.add('active');
-
-    const industry = target.dataset.industry;
-    if (industry === '全部') {
-      renderGrid(cases);
-    } else {
-      const filteredCases = cases.filter(c => c.industry === industry);
-      renderGrid(filteredCases);
-    }
+    applyFilters();
   }
 }
 
@@ -193,8 +232,8 @@ function handleFilterClick(e) {
  * Handles clicks on the case grid (event delegation).
  * @param {Event} e - The click event.
  */
-function handleGridClick(e) {
-    const target = e.target;
+function handleGridClick(e: Event) {
+    const target = e.target as HTMLElement;
     const card = target.closest('.case-card');
     if (card instanceof HTMLElement && card.dataset.id) {
         const caseId = parseInt(card.dataset.id, 10);
@@ -206,7 +245,7 @@ function handleGridClick(e) {
 // --- INITIALIZATION ---
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (!filterNav || !caseGrid || !caseDetailView || !backBtn) {
+  if (!searchInput || !filterNav || !caseGrid || !caseDetailView || !backBtn) {
     console.error('A required element was not found in the DOM.');
     return;
   }
@@ -217,6 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Attach event listeners
   filterNav.addEventListener('click', handleFilterClick);
+  searchInput.addEventListener('input', applyFilters);
   caseGrid.addEventListener('click', handleGridClick);
   backBtn.addEventListener('click', showGridView);
 });
