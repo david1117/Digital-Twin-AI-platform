@@ -48,7 +48,7 @@ const cases: Case[] = [
     id: 3,
     title: '「活心計畫」個人化心臟手術模擬',
     industry: '醫療保健',
-    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1470&auto=format&fit=crop',
+    image: 'https://www.3ds.com/uploads/pics/lhp-logo-Gen2-gif-180x140.gif',
     summary: '利用患者 MRI 數據建立功能性心臟數位孿生，讓外科醫生能進行術前模擬，提升手術成功率。',
     background: '複雜的心臟外科手術對精準度要求極高，傳統上醫生主要依賴 2D 影像和經驗進行規劃，存在不確定性。',
     solution: '達梭系統（Dassault Systèmes）的「活心計畫」(Living Heart Project) 能將患者的 MRI 和 CT 掃描數據轉換為一個功能性的 3D 心臟數位孿生。外科醫生可以在虛擬環境中對這個模型進行互動，模擬不同手術方案，並預測手術效果。',
