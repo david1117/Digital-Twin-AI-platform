@@ -120,7 +120,7 @@ const cases: Case[] = [
     id: 9,
     title: 'John Deere 精準農業',
     industry: '農業',
-    image: 'https://images.unsplash.com/photo-1623594830873-3f19f186c3d9?q=80&w=1470&auto=format&fit=crop',
+    image: 'https://www.deere.com/assets/images/region-4/products/technology-products/precision-ag-technology/data-management/equipment_mobile_1_large_30970aa03b3fd029e192d754c0e440443f493bf8.jpg',
     summary: 'John Deere 利用感測器、AI 和機器學習技術，為其農業機械（如拖拉機、噴灑機）建立數位孿生，實現自主作業與精準的作物管理。',
     background: '傳統農業面臨著勞動力短缺、成本上升以及資源浪費（如過度使用除草劑）的挑戰。農民需要更智慧的工具來提高產量和可持續性。',
     solution: '透過在拖拉機和噴灑機上安裝多個攝影機和感測器，John Deere 的系統能夠即時建立農田的數位孿生。AI 模型可以區分作物和雜草，並僅對雜草進行精準噴灑（See & Spray™ 技術）。同時，自主拖拉機能夠根據 GPS 和數位模型，24 小時不間斷地進行耕作。',
