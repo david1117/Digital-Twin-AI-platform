@@ -36,7 +36,7 @@ const cases: Case[] = [
     id: 2,
     title: '新加坡城市交通流量即時模擬',
     industry: '智慧城市',
-    image: 'https://images.unsplash.com/photo-1533230492595-5203b57229a0?q=80&w=1470&auto=format&fit=crop',
+    image: 'https://isomer-user-content.by.gov.sg/85/9cde7179-d2e4-46bd-bd28-9e8ec76e2fe3/5-things-to-know-about-virtual-singapore-part-1.png',
     summary: '「虛擬新加坡」計畫建立全國的 3D 數位孿生，用於城市規劃、交通管理與環境模擬，提升決策效率。',
     background: '新加坡是一個高密度城市國家，面臨著交通壅塞、資源有限和氣候變遷等多重挑戰。政府需要一個強大的工具來進行跨部門的協調與長期規劃。',
     solution: '「虛擬新加坡」(Virtual Singapore) 是一個動態的 3D 城市模型和協作數據平台。它整合了來自不同政府機構的靜態和即時數據，可用於模擬交通流量、太陽能板部署潛力、甚至在緊急情況下的疏散路線規劃。',
