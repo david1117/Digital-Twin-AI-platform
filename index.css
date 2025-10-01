@@ -255,6 +255,30 @@ header p {
     margin-bottom: 0.5rem;
 }
 
+#detail-content .reference-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+#detail-content .ref-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+#detail-content .ref-link:hover {
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+}
+
 /* Modal Styles */
 .modal-overlay {
     position: fixed;

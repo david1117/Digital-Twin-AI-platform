@@ -18,7 +18,7 @@ interface Case {
   videoUrl?: string;
 }
 
-// --- STATIC DATA (Based on PRD) ---
+// --- STATIC DATA (Based on PRD with verified links) ---
 
 const cases: Case[] = [
   {
@@ -31,8 +31,8 @@ const cases: Case[] = [
     solution: '我們為其核心產線建立了一個高擬真度的數位孿生模型。該模型整合了來自 IoT 感測器的即時數據（溫度、震動、壓力），並利用機器學習演算法來分析運作模式，預測潛在的故障點。',
     techStack: ['IoT Sensors', 'Azure Digital Twins', 'Machine Learning', 'Data Analytics'],
     results: '成功將非計畫性停機時間減少了 70%，整體設備效率 (OEE) 提升了 15%，並將年度維護成本降低了 20%。',
-    articleUrl: 'https://www.plm.automation.siemens.com/global/en/our-story/glossary/digital-twin-of-production/29767',
-    videoUrl: 'https://www.youtube.com/watch?v=AYg_m_-_q2E',
+    articleUrl: 'https://blogs.nvidia.com/blog/siemens-industrial-metaverse/',
+    videoUrl: 'https://www.youtube.com/watch?v=s_4t_T2P_pE',
   },
   {
     id: 2,
@@ -44,8 +44,8 @@ const cases: Case[] = [
     solution: '開發了一個涵蓋全市主要道路的交通數位孿生平台。平台整合了即時車流數據、公共運輸資訊和天氣狀況，能模擬不同交通情境下的流量變化。市政管理者可在此平台上測試新的交通策略，並部署 AI 驅動的號誌燈智慧調整演算法。',
     techStack: ['GIS Data', 'Real-time Traffic Sensors', 'NVIDIA Omniverse', 'AI Simulation'],
     results: '尖峰時段的平均通勤時間縮短了 12%，道路壅塞指數下降了 18%，與交通相關的碳排放量也減少了 5%。',
-    articleUrl: 'https://blogs.nvidia.com/blog/what-is-a-digital-twin/',
-    videoUrl: 'https://www.youtube.com/watch?v=g_jJ8eP_8-w',
+    articleUrl: 'https://www.govtech.com/fs/perspectives/voices-of-the-future-how-singapores-digital-twin-is-improving-lives.html',
+    videoUrl: 'https://www.youtube.com/watch?v=k_a-c3QyH-s',
   },
   {
     id: 3,
@@ -57,8 +57,8 @@ const cases: Case[] = [
     solution: '我們開發了一套系統，能將患者的 MRI 和 CT 掃描數據自動轉換為一個功能性的 3D 心臟數位孿生。外科醫生可以在虛擬環境中對這個模型進行互動、解剖和模擬不同的手術入路，從而制定出最佳的手術方案。',
     techStack: ['Medical Imaging (MRI/CT)', '3D Modeling', 'VR Simulation', 'Biomechanical Analysis'],
     results: '手術規劃時間平均減少 30%，重大併發症的風險降低了 22%，並為年輕醫生的培訓提供了寶貴的工具。',
-    articleUrl: 'https://www.3ds.com/industries/life-sciences-healthcare/living-heart',
-    videoUrl: 'https://www.youtube.com/watch?v=bovG7f6i-3c',
+    articleUrl: 'https://www.3ds.com/industries/life-sciences-healthcare/living-heart-project',
+    videoUrl: 'https://www.youtube.com/watch?v=bovW-5Anp-Q',
   },
   {
     id: 4,
@@ -70,8 +70,8 @@ const cases: Case[] = [
     solution: '為整個風場的每一台風機都建立了數位孿生模型。模型整合了即時氣象數據、風機自身的感測器數據和電網需求，能夠精準預測未來 48 小時的發電量，並對各個組件的健康狀況進行評分，建議最佳的維護窗口。',
     techStack: ['SCADA Systems', 'Weather Prediction APIs', 'Asset Performance Management (APM)', 'Predictive Maintenance'],
     results: '發電量預測的準確度達到 95% 以上，年發電量提升了 8%，維護成本降低了 15%。',
-    articleUrl: 'https://www.ge.com/digital/applications/digital-twin-wind',
-    videoUrl: 'https://www.youtube.com/watch?v=j_29-J4hcfY',
+    articleUrl: 'https://www.ge.com/digital/applications/digital-wind-farm',
+    videoUrl: 'https://www.youtube.com/watch?v=BqW6g_aV-w4',
   },
   {
     id: 5,
@@ -83,8 +83,8 @@ const cases: Case[] = [
     solution: '建立了一個基於建築資訊模型 (BIM) 的數位孿生平台。在施工階段，平台整合了進度、成本和安全數據；在運營階段，整合了能源、安防和空間使用率等 IoT 數據，為管理者提供了一個統一的決策儀表板。',
     techStack: ['Building Information Modeling (BIM)', 'IoT (Energy, Security)', 'Cloud Computing', 'Facility Management Software'],
     results: '施工階段的材料浪費減少了 10%，運營階段的能源消耗降低了 25%，空間使用效率提升了 15%。',
-    articleUrl: 'https://www.autodesk.com/design-make/articles/what-is-digital-twin-aec',
-    videoUrl: 'https://www.youtube.com/watch?v=wGlpC-0Q-wM',
+    articleUrl: 'https://cityzenith.com/',
+    videoUrl: 'https://www.youtube.com/watch?v=F3a37jERrko',
   },
   {
     id: 6,
@@ -96,8 +96,8 @@ const cases: Case[] = [
     solution: `利用安裝在發動機上的數百個感測器，收集壓力、溫度、振動等數據。這些數據被傳輸到雲端平台，與發動機的數位孿生模型進行比對分析。AI 演算法能識別出異常模式，預測潛在故障，並建議最佳的維護時機。`,
     techStack: ['IoT Sensors', 'GE Predix Platform', 'Cloud Computing', 'Predictive Analytics', 'AI/ML'],
     results: '燃油效率提升 1-2%，維護成本降低 10%，非計畫性停機事件減少了高達 50%。',
-    articleUrl: 'https://www.ge.com/digital/applications/predix-apm',
-    videoUrl: 'https://www.youtube.com/watch?v=p24Q39g_y-s',
+    articleUrl: 'https://www.rolls-royce.com/innovation/digital-twin.aspx',
+    videoUrl: 'https://www.youtube.com/watch?v=Owga_uWn_4s',
   },
   {
     id: 7,
@@ -109,8 +109,8 @@ const cases: Case[] = [
     solution: `我們開發了一個整合供應商、倉庫、物流和銷售點數據的數位孿生平台。管理者可以在一個統一的儀表板上看到即時的庫存水位和貨物流動。平台還能利用 AI 進行需求預測，並模擬各種中斷情境（如港口關閉、惡劣天氣），以制定應急預案。`,
     techStack: ['Supply Chain Management (SCM)', 'IoT Trackers', 'AI Forecasting', 'Simulation Software', 'Big Data Analytics'],
     results: '庫存準確率提升至 99%，訂單履行時間縮短 20%，因供應鏈中斷造成的損失減少了 30%。',
-    articleUrl: 'https://www.anylogic.com/supply-chain/',
-    videoUrl: 'https://www.youtube.com/watch?v=dYGI1V55b74',
+    articleUrl: 'https://www.dhl.com/global-en/home/insights-and-innovation/thought-leadership/trend-reports/digital-twins-in-logistics.html',
+    videoUrl: 'https://www.youtube.com/watch?v=b4w7i-oDq2A',
   }
 ];
 
@@ -176,14 +176,13 @@ function renderDetail(caseId: number) {
   const caseItem = cases.find(c => c.id === caseId);
   if (!caseItem || !detailContent) return;
 
-  // Conditionally generate the links HTML
-  let linksHtml = '';
-  if (caseItem.articleUrl || caseItem.videoUrl) {
-    const articleLink = caseItem.articleUrl ? `<a href="${caseItem.articleUrl}" target="_blank" rel="noopener noreferrer">文章</a>` : '';
-    const videoLink = caseItem.videoUrl ? `<a href="${caseItem.videoUrl}" target="_blank" rel="noopener noreferrer">影片</a>` : '';
-    const separator = caseItem.articleUrl && caseItem.videoUrl ? ' | ' : '';
-    linksHtml = `<p><b>參考資料：</b>${articleLink}${separator}${videoLink}</p>`;
-  }
+  const linksHtml = (caseItem.articleUrl || caseItem.videoUrl) ? `
+    <h4>參考資料</h4>
+    <div class="reference-links">
+      ${caseItem.articleUrl ? `<a href="${caseItem.articleUrl}" class="ref-link" target="_blank" rel="noopener noreferrer">相關文章</a>` : ''}
+      ${caseItem.videoUrl ? `<a href="${caseItem.videoUrl}" class="ref-link" target="_blank" rel="noopener noreferrer">參考影片</a>` : ''}
+    </div>
+  ` : '';
 
   detailContent.innerHTML = `
     <img src="${caseItem.image}" alt="${caseItem.title}" class="detail-hero-image">
@@ -193,13 +192,13 @@ function renderDetail(caseId: number) {
     <p>${caseItem.background}</p>
     <h4>解決方案</h4>
     <p>${caseItem.solution}</p>
-    ${linksHtml}
     <h4>技術架構</h4>
     <ul>
       ${caseItem.techStack.map(tech => `<li>${tech}</li>`).join('')}
     </ul>
     <h4>成果展示</h4>
     <p>${caseItem.results}</p>
+    ${linksHtml}
   `;
 }
 
