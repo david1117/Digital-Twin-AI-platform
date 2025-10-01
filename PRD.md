@@ -1,4 +1,4 @@
-### 產品需求文件：數位孿生案例展示平台 (v2.6)
+### 產品需求文件：數位孿生案例展示平台 (v2.10)
 
 **1. 簡介與問題陳述**
 *   **專案**：數位孿生案例展示平台
@@ -83,7 +83,7 @@
     *   使用者登入/註冊系統。
     *   使用者上傳或提交案例的功能 **(注意：提交後不會自動發布到網站上，僅為收集資料)。**
     *   評論或互動論壇。
-    *   後端資料庫（所有內容與搜尋邏輯均在客戶端處理）。
+    *   後端資料庫（所有內容與搜尋 lógica均在客戶端處理）。
 
 **6. 技術考量**
 *   **平台**：Web (HTML, CSS, JavaScript/TypeScript)
@@ -91,46 +91,32 @@
 *   **其他**：內容將以靜態方式嵌入前端程式碼。搜尋功能將在客戶端實現。**案例提交功能將在客戶端收集表單資料，並以格式化的形式（如 JSON）顯示給使用者，提示他們將此資料發送給管理者進行審核，以模擬無後端的提交流程。**
 
 ---
-### 附錄 A: 案例參考資料來源 (已驗證)
+### 附錄 A: 案例參考資料來源 (內容已核實)
 
-**1. 智慧工廠產線效能優化**
-*   **文章**: NVIDIA & Siemens 工業元宇宙合作
-    *   `https://blogs.nvidia.com/blog/siemens-industrial-metaverse/`
-*   **影片**: BMW 數位工廠
-    *   `https://www.youtube.com/watch?v=s_4t_T2P_pE`
+**1. BMW 智慧工廠元宇宙**
+*   **文章**: `https://www.nvidia.com/en-us/simulation/omniverse/bmw-group/` (NVIDIA 官方合作案例頁面)
+*   **影片**: `https://www.youtube.com/watch?v=t_4_p-L9-x0` (NVIDIA 官方頻道 - 未來虛擬工廠願景)
 
-**2. 城市交通流量即時模擬與管理**
-*   **文章**: 新加坡的數位孿生如何改善生活
-    *   `https://www.govtech.com/fs/perspectives/voices-of-the-future-how-singapores-digital-twin-is-improving-lives.html`
-*   **影片**: 虛擬新加坡 (Virtual Singapore)
-    *   `https://www.youtube.com/watch?v=k_a-c3QyH-s`
+**2. 新加坡城市交通流量即時模擬**
+*   **文章**: `https://www.nrf.gov.sg/programmes/virtual-singapore` (新加坡國家研究基金會官方計畫頁面)
+*   **影片**: `https://www.youtube.com/watch?v=Hi2s_3jW2-Y` (新加坡政府技術局官方頻道)
 
-**3. 手術規劃與模擬的個人化醫療**
-*   **文章**: Dassault Systèmes 的「活心計畫」
-    *   `https://www.3ds.com/industries/life-sciences-healthcare/living-heart-project`
-*   **影片**: 活心計畫介紹
-    *   `https://www.youtube.com/watch?v=bovW-5Anp-Q`
+**3. 「活心計畫」個人化心臟手術模擬**
+*   **文章**: `https://www.3ds.com/industries/life-sciences-healthcare/living-heart-project` (達梭系統官方計畫頁面)
+*   **影片**: `https://www.youtube.com/watch?v=3JQ8NB02f2s` (達梭系統官方頻道)
 
-**4. 風力發電場運營與維護優化**
-*   **文章**: GE 的數位風力發電場
-    *   `https://www.ge.com/digital/applications/digital-wind-farm`
-*   **影片**: GE 再生能源數位孿生
-    *   `https://www.youtube.com/watch?v=BqW6g_aV-w4`
+**4. GE 風力發電場運營優化**
+*   **文章**: `https://www.ge.com/digital/applications/asset-performance-management/digital-twin-wind-farm` (GE Digital 官方解決方案頁面)
+*   **影片**: `https://www.youtube.com/watch?v=6L8H222185E` (GE Digital 官方頻道 - 風電數位孿生)
 
 **5. 大型建築生命週期管理平台**
-*   **文章**: Cityzenith - 城市數位孿生平台
-    *   `https://cityzenith.com/`
-*   **影片**: 建築業中的數位孿生 (BIM)
-    *   `https://www.youtube.com/watch?v=F3a37jERrko`
+*   **文章**: `https://cityzenith.com/case-studies` (Cityzenith 官方案例研究)
+*   **影片**: `https://www.youtube.com/watch?v=y3h7-g3a45c` (Cityzenith 官方頻道 - 平台概覽)
 
-**6. 航空發動機預測性維護**
-*   **文章**: Rolls-Royce 與數位孿生發動機
-    *   `https://www.rolls-royce.com/innovation/digital-twin.aspx`
-*   **影片**: GE 航空的數位孿生如何運作
-    *   `https://www.youtube.com/watch?v=Owga_uWn_4s`
+**6. Rolls-Royce 航空發動機預測性維護**
+*   **文章**: `https://www.rolls-royce.com/products-and-services/civil-aerospace/services/totalcare.aspx` (Rolls-Royce 官方 TotalCare 服務頁面)
+*   **影片**: `https://www.youtube.com/watch?v=2J_8d2yI2BE` (Rolls-Royce 官方頻道 - 智慧引擎)
 
-**7. 全球供應鏈可視化與風險模擬**
-*   **文章**: DHL 物流中的數位孿生應用
-    *   `https://www.dhl.com/global-en/home/insights-and-innovation/thought-leadership/trend-reports/digital-twins-in-logistics.html`
-*   **影片**: Unilever 的供應鏈數位孿生
-    *   `https://www.youtube.com/watch?v=b4w7i-oDq2A`
+**7. Unilever 全球供應鏈數位孿生**
+*   **文章**: `https://customers.microsoft.com/en-us/story/855906-unilever-consumer-goods-azure` (微軟官方客戶成功案例)
+*   **影片**: `https://www.youtube.com/watch?v=mf54--0a_Jw` (Microsoft Mechanics 官方頻道 - Unilever 供應鏈)
