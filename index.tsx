@@ -15,7 +15,6 @@ interface Case {
   techStack: string[];
   results: string;
   articleUrl?: string;
-  videoUrl?: string;
 }
 
 // --- STATIC DATA (Based on PRD with newly verified links) ---
@@ -32,7 +31,6 @@ const cases: Case[] = [
     techStack: ['NVIDIA Omniverse', 'Universal Scene Description (USD)', 'AI Simulation', 'Real-time Ray Tracing'],
     results: '規劃效率提升 30%，能夠在虛擬環境中進行無風險的測試與優化，並加速了新車型的上市時間。',
     articleUrl: 'https://www.press.bmwgroup.com/global/article/detail/T0329569EN/bmw-group-and-nvidia-take-virtual-factory-planning-to-the-next-level?language=en',
-    videoUrl: 'https://www.youtube.com/watch?v=t_4_p-L9-x0',
   },
   {
     id: 2,
@@ -45,7 +43,6 @@ const cases: Case[] = [
     techStack: ['GIS Data', '3DEXPERIENCE Platform', 'Real-time IoT Data', 'Urban Simulation'],
     results: '為城市規劃者提供了統一的數據視圖，能夠在虛擬環境中測試政策影響，提升了跨部門協作效率與城市韌性。',
     articleUrl: 'https://www.tech.gov.sg/technews/5-things-to-know-about-virtual-singapore',
-    videoUrl: 'https://www.youtube.com/watch?v=Hi2s_3jW2-Y',
   },
   {
     id: 3,
@@ -58,7 +55,6 @@ const cases: Case[] = [
     techStack: ['Medical Imaging (MRI/CT)', '3D Modeling', 'Biomechanical Simulation', 'FDA Approval'],
     results: '幫助醫生為特定患者制定最佳手術方案，降低手術風險，並加速了新型醫療器材的研發與測試過程。',
     articleUrl: 'https://www.3ds.com/products-services/simulia/solutions/life-sciences-healthcare/the-living-heart-project/',
-    videoUrl: 'https://www.youtube.com/watch?v=3JQ8NB02f2s',
   },
   {
     id: 4,
@@ -71,7 +67,6 @@ const cases: Case[] = [
     techStack: ['SCADA Systems', 'Predictive Analytics', 'Asset Performance Management (APM)', 'Industrial IoT (IIoT)'],
     results: '透過優化控制，單台風機的年發電量可提升高達 20%，同時降低了非計畫性停機的風險與維護成本。',
     articleUrl: 'https://www.gevernova.com/software/blog/what-digital-twin',
-    videoUrl: 'https://www.youtube.com/watch?v=6L8H222185E',
   },
   {
     id: 5,
@@ -84,7 +79,6 @@ const cases: Case[] = [
     techStack: ['Building Information Modeling (BIM)', 'IoT (Energy, Security)', 'Cloud Computing', 'Facility Management Software'],
     results: '施工階段的材料浪費減少了 10%，運營階段的能源消耗降低了 25%，空間使用效率提升了 15%。',
     articleUrl: 'https://cityzenith.com/case-studies',
-    videoUrl: 'https://www.youtube.com/watch?v=y3h7-g3a45c',
   },
   {
     id: 6,
@@ -97,7 +91,6 @@ const cases: Case[] = [
     techStack: ['On-wing Sensors', 'Predictive Analytics', 'Cloud Computing', 'Engine Health Management'],
     results: '顯著減少了非計畫性的停機時間，優化了燃油消耗，並延長了發動機的使用壽命，為航空公司節省了數百萬美元的運營成本。',
     articleUrl: 'https://www.rolls-royce.com/products-and-services/civil-aerospace/services/totalcare.aspx',
-    videoUrl: 'https://www.youtube.com/watch?v=2J_8d2yI2BE',
   },
   {
     id: 7,
@@ -110,7 +103,6 @@ const cases: Case[] = [
     techStack: ['Microsoft Azure', 'Azure Digital Twins', 'AI & Machine Learning', 'Big Data Analytics', 'Supply Chain Management (SCM)'],
     results: '提高了需求預測的準確性，優化了庫存水平，縮短了對市場變化的反應時間，並增強了整個供應鏈的韌性。',
     articleUrl: 'https://customers.microsoft.com/en-us/story/855906-unilever-consumer-goods-azure',
-    videoUrl: 'https://www.youtube.com/watch?v=mf54--0a_Jw',
   },
   {
     id: 8,
@@ -123,7 +115,6 @@ const cases: Case[] = [
     techStack: ['IBM IoT Platform', 'Weather Company Data', 'AI Analytics', 'Real-time Sensor Network'],
     results: '船舶等待時間平均減少 1 小時，提高了泊位利用率，增強了港口運營的安全性和效率，每年可為航運公司節省數百萬歐元的成本。',
     articleUrl: 'https://www.portofrotterdam.com/en/our-port/smart-port/digitalisation',
-    videoUrl: 'https://www.youtube.com/watch?v=72d53K3P44U',
   },
   {
     id: 9,
@@ -136,7 +127,6 @@ const cases: Case[] = [
     techStack: ['Computer Vision', 'Machine Learning', 'GPS & Geofencing', 'See & Spray™ Technology', 'Autonomous Driving'],
     results: '除草劑使用量減少超過 77%，顯著降低了農業成本和對環境的影響。自主作業提高了農場的生產效率，並解決了勞動力短缺的問題。',
     articleUrl: 'https://www.deere.com/en/our-company/news-and-announcements/news-releases/2022/january/ces-2022-fully-autonomous-tractor/',
-    videoUrl: 'https://www.youtube.com/watch?v=QvFoRk4_4aM',
   }
 ];
 
@@ -202,11 +192,10 @@ function renderDetail(caseId: number) {
   const caseItem = cases.find(c => c.id === caseId);
   if (!caseItem || !detailContent) return;
 
-  const linksHtml = (caseItem.articleUrl || caseItem.videoUrl) ? `
+  const linksHtml = caseItem.articleUrl ? `
     <h4>參考資料</h4>
     <div class="reference-links">
-      ${caseItem.articleUrl ? `<a href="${caseItem.articleUrl}" class="ref-link" target="_blank" rel="noopener noreferrer">相關文章</a>` : ''}
-      ${caseItem.videoUrl ? `<a href="${caseItem.videoUrl}" class="ref-link" target="_blank" rel="noopener noreferrer">參考影片</a>` : ''}
+      <a href="${caseItem.articleUrl}" class="ref-link" target="_blank" rel="noopener noreferrer">相關文章</a>
     </div>
   ` : '';
 

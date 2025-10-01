@@ -1,9 +1,9 @@
-### 產品需求文件：數位孿生案例展示平台 (v2.15)
+### 產品需求文件：數位孿生案例展示平台 (v2.16)
 
 **1. 簡介與問題陳述**
 *   **專案**：數位孿生案例展示平台
 *   **問題**：對於想了解或投入數位孿生（Digital Twin）領域的開發者、學生或企業來說，缺乏一個集中、高品質且**內容可信**的案例參考來源。此外，平台目前為單向資訊展示，有成功案例的使用者無法分享其經驗，限制了平台的內容廣度與社群參與度。
-*   **解決方案**：升級現有的線上展示平台，除了原有的行業分類篩選與關鍵字搜尋功能外，**新增一個讓使用者能分享自身成功案例的功能，並確保所有展示案例均附有真實、可驗證的外部參考資料。** 平台將精選並詳細介紹各種行業的數位孿生成功案例，並透過社群貢獻來豐富其內容，讓使用者能透過更精準的搜尋與更多元的案例，快速學習並激發靈感。(v2.15: 內容已最終核實，批准實作。)
+*   **解決方案**：升級現有的線上展示平台，除了原有的行業分類篩選與關鍵字搜尋功能外，**新增一個讓使用者能分享自身成功案例的功能，並確保所有展示案例均附有真實、可驗證的外部參考文章。** 平台將精選並詳細介紹各種行業的數位孿生成功案例，並透過社群貢獻來豐富其內容，讓使用者能透過更精準的搜尋與更多元的案例，快速學習並激發靈感。(v2.16: 根據專案經理指示，因影片連結品質無法保證，已全面移除所有影片連結功能與資料。)
 
 **2. 目標使用者**
 *   **技術開發者/工程師**：希望尋找特定數位孿生技術棧、架構和實踐的專業人士。
@@ -76,7 +76,7 @@
     *   按行業分類篩選。
     *   基於關鍵字的客戶端即時搜尋功能。
     *   **新增：** 使用者案例分享功能（透過表單提交，前端處理）。
-    *   **提供案例的外部參考文章與影片連結。**
+    *   **提供案例的外部參考文章連結。**
     *   靜態內容頁面。
     *   響應式設計。
 *   **範圍外**：
@@ -84,6 +84,7 @@
     *   使用者上傳或提交案例的功能 **(注意：提交後不會自動發布到網站上，僅為收集資料)。**
     *   評論或互動論壇。
     *   後端資料庫（所有內容與搜尋 lógica均在客戶端處理）。
+    *   **影片連結功能。**
 
 **6. 技術考量**
 *   **平台**：Web (HTML, CSS, JavaScript/TypeScript)
@@ -95,36 +96,27 @@
 
 **1. BMW 智慧工廠元宇宙**
 *   **文章**: `https://www.press.bmwgroup.com/global/article/detail/T0329569EN/bmw-group-and-nvidia-take-virtual-factory-planning-to-the-next-level?language=en` (BMW 官方新聞稿)
-*   **影片**: `https://www.youtube.com/watch?v=t_4_p-L9-x0` (NVIDIA 官方頻道 - 未來虛擬工廠願景)
 
 **2. 新加坡城市交通流量即時模擬**
 *   **文章**: `https://www.tech.gov.sg/technews/5-things-to-know-about-virtual-singapore` (新加坡政府技術局官方技術新聞)
-*   **影片**: `https://www.youtube.com/watch?v=Hi2s_3jW2-Y` (新加坡政府技術局官方頻道)
 
 **3. 「活心計畫」個人化心臟手術模擬**
 *   **文章**: `https://www.3ds.com/products-services/simulia/solutions/life-sciences-healthcare/the-living-heart-project/` (達梭系統官方計畫頁面)
-*   **影片**: `https://www.youtube.com/watch?v=3JQ8NB02f2s` (達梭系統官方頻道)
 
 **4. GE 風力發電場運營優化**
 *   **文章**: `https://www.gevernova.com/software/blog/what-digital-twin` (GE Vernova 官方部落格 - 數位孿生定義)
-*   **影片**: `https://www.youtube.com/watch?v=6L8H222185E` (GE Digital 官方頻道 - 風電數位孿生)
 
 **5. 大型建築生命週期管理平台**
 *   **文章**: `https://cityzenith.com/case-studies` (Cityzenith 官方案例研究)
-*   **影片**: `https://www.youtube.com/watch?v=y3h7-g3a45c` (Cityzenith 官方頻道 - 平台概覽)
 
 **6. Rolls-Royce 航空發動機預測性維護**
 *   **文章**: `https://www.rolls-royce.com/products-and-services/civil-aerospace/services/totalcare.aspx` (Rolls-Royce 官方 TotalCare 服務頁面)
-*   **影片**: `https://www.youtube.com/watch?v=2J_8d2yI2BE` (Rolls-Royce 官方頻道 - 智慧引擎)
 
 **7. Unilever 全球供應鏈數位孿生**
 *   **文章**: `https://customers.microsoft.com/en-us/story/855906-unilever-consumer-goods-azure` (微軟官方客戶成功案例)
-*   **影片**: `https://www.youtube.com/watch?v=mf54--0a_Jw` (Microsoft Mechanics 官方頻道 - Unilever 供應鏈)
 
 **8. 鹿特丹港智慧物流**
 *   **文章**: `https://www.portofrotterdam.com/en/our-port/smart-port/digitalisation` (鹿特丹港官方網站)
-*   **影片**: `https://www.youtube.com/watch?v=72d53K3P44U` (IBM 官方頻道 - 鹿特丹港合作案例)
 
 **9. John Deere 精準農業**
 *   **文章**: `https://www.deere.com/en/our-company/news-and-announcements/news-releases/2022/january/ces-2022-fully-autonomous-tractor/` (John Deere 官方新聞稿)
-*   **影片**: `https://www.youtube.com/watch?v=QvFoRk4_4aM` (John Deere 官方頻道 - See & Spray™ Ultimate)
