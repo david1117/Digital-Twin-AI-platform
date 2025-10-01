@@ -31,7 +31,7 @@ const cases: Case[] = [
     solution: '透過 NVIDIA Omniverse 平台，BMW 建立了一個與實體工廠完全同步、符合物理規律的數位孿生模型。全球各地的團隊可以在這個虛擬空間中協同作業，進行產線佈局、機器人編程和人因工程的模擬，並在部署到實體工廠前找出最佳方案。',
     techStack: ['NVIDIA Omniverse', 'Universal Scene Description (USD)', 'AI Simulation', 'Real-time Ray Tracing'],
     results: '規劃效率提升 30%，能夠在虛擬環境中進行無風險的測試與優化，並加速了新車型的上市時間。',
-    articleUrl: 'https://www.nvidia.com/en-us/simulation/omniverse/bmw-group/',
+    articleUrl: 'https://www.press.bmwgroup.com/global/article/detail/T0329569EN/bmw-group-and-nvidia-take-virtual-factory-planning-to-the-next-level?language=en',
     videoUrl: 'https://www.youtube.com/watch?v=t_4_p-L9-x0',
   },
   {
@@ -44,7 +44,7 @@ const cases: Case[] = [
     solution: '「虛擬新加坡」(Virtual Singapore) 是一個動態的 3D 城市模型和協作數據平台。它整合了來自不同政府機構的靜態和即時數據，可用於模擬交通流量、太陽能板部署潛力、甚至在緊急情況下的疏散路線規劃。',
     techStack: ['GIS Data', '3DEXPERIENCE Platform', 'Real-time IoT Data', 'Urban Simulation'],
     results: '為城市規劃者提供了統一的數據視圖，能夠在虛擬環境中測試政策影響，提升了跨部門協作效率與城市韌性。',
-    articleUrl: 'https://www.nrf.gov.sg/programmes/virtual-singapore',
+    articleUrl: 'https://www.tech.gov.sg/technews/5-things-to-know-about-virtual-singapore',
     videoUrl: 'https://www.youtube.com/watch?v=Hi2s_3jW2-Y',
   },
   {
@@ -57,7 +57,7 @@ const cases: Case[] = [
     solution: '達梭系統（Dassault Systèmes）的「活心計畫」(Living Heart Project) 能將患者的 MRI 和 CT 掃描數據轉換為一個功能性的 3D 心臟數位孿生。外科醫生可以在虛擬環境中對這個模型進行互動，模擬不同手術方案，並預測手術效果。',
     techStack: ['Medical Imaging (MRI/CT)', '3D Modeling', 'Biomechanical Simulation', 'FDA Approval'],
     results: '幫助醫生為特定患者制定最佳手術方案，降低手術風險，並加速了新型醫療器材的研發與測試過程。',
-    articleUrl: 'https://www.3ds.com/industries/life-sciences-healthcare/living-heart-project',
+    articleUrl: 'https://www.3ds.com/products-services/simulia/solutions/life-sciences-healthcare/the-living-heart-project/',
     videoUrl: 'https://www.youtube.com/watch?v=3JQ8NB02f2s',
   },
   {
@@ -70,7 +70,7 @@ const cases: Case[] = [
     solution: 'GE 為每一台風機都建立了數位孿生模型。模型整合了即時氣象數據、風機自身的感測器數據和電網需求，能夠持續監控風機的健康狀況，並建議調整葉片角度等參數以最大化發電效率，同時預測最佳的維護窗口。',
     techStack: ['SCADA Systems', 'Predictive Analytics', 'Asset Performance Management (APM)', 'Industrial IoT (IIoT)'],
     results: '透過優化控制，單台風機的年發電量可提升高達 20%，同時降低了非計畫性停機的風險與維護成本。',
-    articleUrl: 'https://www.ge.com/digital/applications/asset-performance-management/digital-twin-wind-farm',
+    articleUrl: 'https://www.gevernova.com/software/blog/what-digital-twin',
     videoUrl: 'https://www.youtube.com/watch?v=6L8H222185E',
   },
   {
@@ -111,6 +111,32 @@ const cases: Case[] = [
     results: '提高了需求預測的準確性，優化了庫存水平，縮短了對市場變化的反應時間，並增強了整個供應鏈的韌性。',
     articleUrl: 'https://customers.microsoft.com/en-us/story/855906-unilever-consumer-goods-azure',
     videoUrl: 'https://www.youtube.com/watch?v=mf54--0a_Jw',
+  },
+  {
+    id: 8,
+    title: '鹿特丹港智慧物流',
+    industry: '交通與物流',
+    image: 'https://images.unsplash.com/photo-1571747238264-b3e15229f985?q=80&w=600&h=400&auto=format&fit=crop',
+    summary: '鹿特丹港與 IBM 合作，建立了一個覆蓋整個港區的 IoT 平台與數位孿生，以即時監測、預測和優化船舶交通、基礎設施與水文狀況。',
+    background: '作為歐洲最大的港口，鹿特丹港面臨著日益增長的航運量和複雜的調度挑戰。傳統的管理方式難以應對天氣變化、泊位分配和多方協作的即時需求。',
+    solution: '透過部署大量 IoT 感測器，並將數據整合到 IBM IoT 平台上，鹿特丹港創建了一個港口的數位孿生。該平台能即時顯示所有船舶的動態，預測水深、潮汐和風速，並為船長、引航員和碼頭運營商提供最佳的航行和停泊建議。',
+    techStack: ['IBM IoT Platform', 'Weather Company Data', 'AI Analytics', 'Real-time Sensor Network'],
+    results: '船舶等待時間平均減少 1 小時，提高了泊位利用率，增強了港口運營的安全性和效率，每年可為航運公司節省數百萬歐元的成本。',
+    articleUrl: 'https://www.portofrotterdam.com/en/our-port/smart-port/digitalisation',
+    videoUrl: 'https://www.youtube.com/watch?v=72d53K3P44U',
+  },
+  {
+    id: 9,
+    title: 'John Deere 精準農業',
+    industry: '農業',
+    image: 'https://images.unsplash.com/photo-1624473244835-303c2a86c5e7?q=80&w=600&h=400&auto=format&fit=crop',
+    summary: 'John Deere 利用感測器、AI 和機器學習技術，為其農業機械（如拖拉機、噴灑機）建立數位孿生，實現自主作業與精準的作物管理。',
+    background: '傳統農業面臨著勞動力短缺、成本上升以及資源浪費（如過度使用除草劑）的挑戰。農民需要更智慧的工具來提高產量和可持續性。',
+    solution: '透過在拖拉機和噴灑機上安裝多個攝影機和感測器，John Deere 的系統能夠即時建立農田的數位孿生。AI 模型可以區分作物和雜草，並僅對雜草進行精準噴灑（See & Spray™ 技術）。同時，自主拖拉機能夠根據 GPS 和數位模型，24 小時不間斷地進行耕作。',
+    techStack: ['Computer Vision', 'Machine Learning', 'GPS & Geofencing', 'See & Spray™ Technology', 'Autonomous Driving'],
+    results: '除草劑使用量減少超過 77%，顯著降低了農業成本和對環境的影響。自主作業提高了農場的生產效率，並解決了勞動力短缺的問題。',
+    articleUrl: 'https://www.deere.com/en/our-company/news-and-announcements/news-releases/2022/january/ces-2022-fully-autonomous-tractor/',
+    videoUrl: 'https://www.youtube.com/watch?v=QvFoRk4_4aM',
   }
 ];
 

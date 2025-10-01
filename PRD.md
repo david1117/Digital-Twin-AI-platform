@@ -1,9 +1,9 @@
-### 產品需求文件：數位孿生案例展示平台 (v2.10)
+### 產品需求文件：數位孿生案例展示平台 (v2.15)
 
 **1. 簡介與問題陳述**
 *   **專案**：數位孿生案例展示平台
 *   **問題**：對於想了解或投入數位孿生（Digital Twin）領域的開發者、學生或企業來說，缺乏一個集中、高品質且**內容可信**的案例參考來源。此外，平台目前為單向資訊展示，有成功案例的使用者無法分享其經驗，限制了平台的內容廣度與社群參與度。
-*   **解決方案**：升級現有的線上展示平台，除了原有的行業分類篩選與關鍵字搜尋功能外，**新增一個讓使用者能分享自身成功案例的功能，並確保所有展示案例均附有真實、可驗證的外部參考資料。** 平台將精選並詳細介紹各種行業的數位孿生成功案例，並透過社群貢獻來豐富其內容，讓使用者能透過更精準的搜尋與更多元的案例，快速學習並激發靈感。
+*   **解決方案**：升級現有的線上展示平台，除了原有的行業分類篩選與關鍵字搜尋功能外，**新增一個讓使用者能分享自身成功案例的功能，並確保所有展示案例均附有真實、可驗證的外部參考資料。** 平台將精選並詳細介紹各種行業的數位孿生成功案例，並透過社群貢獻來豐富其內容，讓使用者能透過更精準的搜尋與更多元的案例，快速學習並激發靈感。(v2.15: 內容已最終核實，批准實作。)
 
 **2. 目標使用者**
 *   **技術開發者/工程師**：希望尋找特定數位孿生技術棧、架構和實踐的專業人士。
@@ -14,7 +14,7 @@
 **3. 專案目標與成功指標**
 *   **目標**：
     *   目標一：提供一個清晰、易於導覽的介面，讓使用者能輕鬆透過分類篩選和關鍵字搜尋找到案例。
-    *   目標二：呈現至少 7 個來自不同行業的深度案例，並附上真實的參考連結。
+    *   目標二：呈現至少 9 個來自不同行業的深度案例，並附上真實的參考連結。
     *   目標三：為每個案例提供結構化的資訊，包含背景、挑戰、解決方案和技術亮點。
     *   目標四：提升使用者查找特定資訊的效率。
     *   **目標五 (新)：提供一個簡易的流程，讓使用者可以提交自己的數位孿生案例。**
@@ -91,22 +91,22 @@
 *   **其他**：內容將以靜態方式嵌入前端程式碼。搜尋功能將在客戶端實現。**案例提交功能將在客戶端收集表單資料，並以格式化的形式（如 JSON）顯示給使用者，提示他們將此資料發送給管理者進行審核，以模擬無後端的提交流程。**
 
 ---
-### 附錄 A: 案例參考資料來源 (內容已核實)
+### 附錄 A: 案例參考資料來源 (內容由專案經理最終核實)
 
 **1. BMW 智慧工廠元宇宙**
-*   **文章**: `https://www.nvidia.com/en-us/simulation/omniverse/bmw-group/` (NVIDIA 官方合作案例頁面)
+*   **文章**: `https://www.press.bmwgroup.com/global/article/detail/T0329569EN/bmw-group-and-nvidia-take-virtual-factory-planning-to-the-next-level?language=en` (BMW 官方新聞稿)
 *   **影片**: `https://www.youtube.com/watch?v=t_4_p-L9-x0` (NVIDIA 官方頻道 - 未來虛擬工廠願景)
 
 **2. 新加坡城市交通流量即時模擬**
-*   **文章**: `https://www.nrf.gov.sg/programmes/virtual-singapore` (新加坡國家研究基金會官方計畫頁面)
+*   **文章**: `https://www.tech.gov.sg/technews/5-things-to-know-about-virtual-singapore` (新加坡政府技術局官方技術新聞)
 *   **影片**: `https://www.youtube.com/watch?v=Hi2s_3jW2-Y` (新加坡政府技術局官方頻道)
 
 **3. 「活心計畫」個人化心臟手術模擬**
-*   **文章**: `https://www.3ds.com/industries/life-sciences-healthcare/living-heart-project` (達梭系統官方計畫頁面)
+*   **文章**: `https://www.3ds.com/products-services/simulia/solutions/life-sciences-healthcare/the-living-heart-project/` (達梭系統官方計畫頁面)
 *   **影片**: `https://www.youtube.com/watch?v=3JQ8NB02f2s` (達梭系統官方頻道)
 
 **4. GE 風力發電場運營優化**
-*   **文章**: `https://www.ge.com/digital/applications/asset-performance-management/digital-twin-wind-farm` (GE Digital 官方解決方案頁面)
+*   **文章**: `https://www.gevernova.com/software/blog/what-digital-twin` (GE Vernova 官方部落格 - 數位孿生定義)
 *   **影片**: `https://www.youtube.com/watch?v=6L8H222185E` (GE Digital 官方頻道 - 風電數位孿生)
 
 **5. 大型建築生命週期管理平台**
@@ -120,3 +120,11 @@
 **7. Unilever 全球供應鏈數位孿生**
 *   **文章**: `https://customers.microsoft.com/en-us/story/855906-unilever-consumer-goods-azure` (微軟官方客戶成功案例)
 *   **影片**: `https://www.youtube.com/watch?v=mf54--0a_Jw` (Microsoft Mechanics 官方頻道 - Unilever 供應鏈)
+
+**8. 鹿特丹港智慧物流**
+*   **文章**: `https://www.portofrotterdam.com/en/our-port/smart-port/digitalisation` (鹿特丹港官方網站)
+*   **影片**: `https://www.youtube.com/watch?v=72d53K3P44U` (IBM 官方頻道 - 鹿特丹港合作案例)
+
+**9. John Deere 精準農業**
+*   **文章**: `https://www.deere.com/en/our-company/news-and-announcements/news-releases/2022/january/ces-2022-fully-autonomous-tractor/` (John Deere 官方新聞稿)
+*   **影片**: `https://www.youtube.com/watch?v=QvFoRk4_4aM` (John Deere 官方頻道 - See & Spray™ Ultimate)
