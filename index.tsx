@@ -102,7 +102,7 @@ const cases: Case[] = [
     solution: `該數位孿生平台整合了來自供應商、工廠、物流和零售商的數據，創建了一個虛擬的供應鏈模型。管理者可以在平台上即時查看全球庫存，並利用 AI 模擬各種情境（如原料短缺、需求激增），以制定更敏捷的應對策略。`,
     techStack: ['Microsoft Azure', 'Azure Digital Twins', 'AI & Machine Learning', 'Big Data Analytics', 'Supply Chain Management (SCM)'],
     results: '產品圖像的創建速度提高了兩倍，成本降低了 50%，從而實現了 100% 的品牌一致性和更快的內容創建速度。聯合利華透過整合 NVIDIA Omniverse 等技術，大規模提供更高品質、更具成本效益的內容，以幫助釋放更多創意可能性。',
-    articleUrl: 'https://www.unilever.com/news/press-and-media/press-releases/2025/unilever-reinvents-product-shoots-with-digital-twins-and-ai/,
+    articleUrl: 'https://www.unilever.com/news/press-and-media/press-releases/2025/unilever-reinvents-product-shoots-with-digital-twins-and-ai/',
   },
   {
     id: 8,
