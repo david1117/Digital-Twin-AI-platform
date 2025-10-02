@@ -96,7 +96,7 @@ const cases: Case[] = [
     id: 7,
     title: 'Unilever 全球供應鏈數位孿生',
     industry: '零售與物流',
-    image: 'https://www.unilever.com/content-images/92ui5egz/production/6ed8e9dbddb1e5bd51008687eb365e3be3432099-1920x1080.png?rect=2,0,1917,1080&w=600&h=338&fit=crop&auto=format,
+    image: 'https://www.unilever.com/content-images/92ui5egz/production/6ed8e9dbddb1e5bd51008687eb365e3be3432099-1920x1080.png?rect=2,0,1917,1080&w=600&h=338&fit=crop&auto=format',
     summary: 'Unilever 與微軟合作，建立端到端的供應鏈數位孿生，實現庫存、物流與需求的即時可視化，並模擬中斷風險。',
     background: '作為一家全球消費品巨頭，Unilever 的供應鏈極其複雜，涉及數百家工廠和數千家供應商，難以應對市場波動和各種中斷風險。',
     solution: `該數位孿生平台整合了來自供應商、工廠、物流和零售商的數據，創建了一個虛擬的供應鏈模型。管理者可以在平台上即時查看全球庫存，並利用 AI 模擬各種情境（如原料短缺、需求激增），以制定更敏捷的應對策略。`,
